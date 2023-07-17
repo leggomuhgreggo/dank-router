@@ -46,11 +46,13 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
+    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(MainTabs)" options={{ headerShown: false }} />
         <Stack.Screen name="(Modal)/checkout" options={{ presentation: 'modal' }} />
         <Stack.Screen name="(Auth)" options={{ presentation: 'modal' }} />
         <Stack.Screen name="(Error)" options={{ presentation: 'modal' }} />
       </Stack>
+    </ThemeProvider>
   );
 }
