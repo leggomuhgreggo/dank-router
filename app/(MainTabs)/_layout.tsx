@@ -24,6 +24,7 @@ export default function TabLayout() {
 
   return (
     <Tabs
+      backBehavior="order"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
       }}>
